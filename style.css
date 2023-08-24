@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    background-color: #1a2a32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+
+
+/* -----------------------menu-container starts---------------------------------- */
+.menu-container{
+    width: 30vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5vh;
+    /* border: 1px solid white; */
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    column-gap: 10px;
+}
+
+.logo-container svg{
+    height: 5vh;
+    /* width: 20vw; */
+}
+
+
+.choose{
+    background-color: #1f3641;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4vh;
+    row-gap: 2vh;
+    color: white;
+    font-weight: 600;
+    border-radius: 14px;
+    border-bottom: 7px solid #10212a;
+}
+
+.btn-container {
+    display: flex;
+    width: 80%;
+    padding: 10px ;
+    background-color: #1a2a32;
+    column-gap: 10px;
+    border-radius: 15px;
+}
+
+.btn-container button{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+}
+
+
+
+.btn-container svg{
+    width: 20%;
+}
+
+
+.new-game-btn {
+    border: none;
+    width : 100%;
+    padding: 3vh;
+    background-color: #31c3bd;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 14px;
+    border-bottom: 7px solid #118c87;
+}
+
+
+
+
+
+
+/*--------------------------------- game-container starts---------------------------------- */
+
+.game-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    height: fit-content;
+    row-gap: 20px;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header-logo, .turn-display, .restart-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+.header-logo{
+    column-gap: 5px;
+}
+
+
+
+.header svg{
+    height: 25px;
+    
+}
+
+.turn-display{
+    color: #a8bfc9;
+    font-weight: 800;
+    background-color: #1f3641;
+    border-radius: 10px;
+    border-bottom: 5px solid #0d181d;
+    padding: 10px 20px;
+}
+
+
+.restart-btn{
+    border-radius: 7px;
+    border: none;
+    background-color: #a8bfc9;
+    border-bottom: 4px solid #6b8997;
+}
+
+.tile-container{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+     row-gap: 20px;
+     column-gap: 20px;
+     aspect-ratio: 1/1;
+     width : 100%;
+}
+
+.tile{
+    background-color: #1f3641;
+    border-radius: 10px;
+    border-bottom: 7px solid #0d181d;
+    padding: 30%;
+}
+
+.footer{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.footer div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 10px;
+    border-radius: 10px ;
+    font-weight: 600;
+}
+
+.footer div span{
+    font-size: 2rem;
+}
+
+.footer div:nth-child(1){background-color: #31c3bd;}
+.footer div:nth-child(2){background-color: #a8bfc9;}
+.footer div:nth-child(3){background-color: #f2b137;}
+
+
+
+
+
+
+
+/* -------------------------msg-container starts------------------- */
+.msg-container{
+    position: absolute;
+    width: 100vw;
+    background-color: #1f3641;
+    border: 1px solid white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2vh;
+    padding: 5vh;
+}
+
+.msg-container span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color : #a8bfc9;
+
+}
+
+
+.msg-btn-container{
+    display: flex;
+    column-gap: 20px;
+}
+
+.quit-btn, .next-rnd-btn{
+    border: none;
+    background-color: #f2b137;
+    border-bottom: 5px solid #cc8b13;
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.quit-btn{
+    background-color: #a8bfc9;
+    border-bottom: 5px solid #626e73;    
+}
+
+
+
+
+/* ------------------responsivesive---------------------- */
+@media screen and (max-width : 1000px) {
+    
+    .menu-container,.game-container{
+        width : 80vw;
+    }
+
+    .toggle-btns svg{
+        width : 40%;
+    }
+
+    .tile-container{
+        gap : 10px;
+    }
+
+    .menu-container svg {
+        width: 30%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
